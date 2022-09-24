@@ -29,12 +29,26 @@ function mudarCorBody(){
 
     console.log(body.getAttribute('style'))
 
-    if(body.getAttribute('style') === null || body.getAttribute('style') !== 'background-color: #0ff'){
-        body.setAttribute('style', 'background-color: #0ff')
+    if(body.getAttribute('style') !== 'background-color: #0ff'){
+        body.setAttribute('style', 'background-color: #0ff');
+        button.innerHTML = 'Voltar para o original';
     }else{
         body.setAttribute('style', 'background-color: #fff')
+        button.innerHTML = 'Mudar cor';
     }
+}
 
-    
+function mostrarQuadrados(){
+    let divs = document.querySelectorAll('.quadrado');
 
+    divs.forEach(div => {
+        div.setAttribute('style','width: 100px; height: 100px; border: 3px solid #f00;');
+    })
+}
+function mostrarLimoes(){
+    let divs = document.querySelectorAll('.limao');
+
+    divs.forEach(div => {
+        div.setAttribute('style','width: 100px; height: 100px; background-color: #ff0; border-radius: 50% 0');
+    })
 }
