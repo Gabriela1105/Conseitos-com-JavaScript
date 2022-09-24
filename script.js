@@ -17,6 +17,24 @@ function mostrarSaudacao() {
 }
 // mostrarSaudacao();
 function somar(){
-    let valor1 = window.prompt('Digite o valor 1');
-    let valor2 = window.prompt('Digite o valor 2');
+    let valor1 = Number(window.prompt('Digite o valor 1'));
+    let valor2 = Number(window.prompt('Digite o valor 2'));
+    
+    let resultado  = valor1 + valor2;
+    window.alert(resultado)
+}
+function mudarCorBody(){
+    let body = document.querySelector('body') ;
+    let button = document.querySelector('#mudar-cor');
+
+    console.log(body.getAttribute('style'))
+
+    if(body.getAttribute('style') === null || body.getAttribute('style') !== 'background-color: #0ff'){
+        body.setAttribute('style', 'background-color: #0ff')
+    }else{
+        body.setAttribute('style', 'background-color: #fff')
+    }
+
+    
+
 }
